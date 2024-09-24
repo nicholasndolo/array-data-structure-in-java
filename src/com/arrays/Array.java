@@ -28,6 +28,24 @@ public class Array {
         count-- ;
     }
 
+    public int indexOf(int item){
+        for(int i = 0; i < count; i++)
+            if(items[i] == item)
+                return i;
+
+        return -1;
+    }
+
+    public int maxValue(){
+        int max = items[0];
+        for(int i = 0; i < count; i++)
+            if(items[i] > max)
+                max = items[i];
+
+        return max;
+    }
+
+
     public void print(){
         for(int i = 0; i < count; i++)
             System.out.println(items[i]);
